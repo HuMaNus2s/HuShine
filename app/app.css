@@ -1,13 +1,38 @@
 @import "tailwindcss";
 
 @theme {
+  --font-inter: "Inter", sans-serif;
+
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
   "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   
   --color-accent: #5ab900;
   --color-dark: #171717;
   --color-component: #ffffff03;
+  --color-component-button: #c2c2c20d;
   --color-b-component: #c2c2c21a;
+  --color-ink: #c2c2c2;
+
+  --animate-open-menu: open-menu 0.125s ease-out;
+  @keyframes open-menu {
+    0% {
+      opacity: 0;
+      transform: scaleY(0)
+    },
+    100% {
+      opacity: 1;
+      transform: scaleY(1);
+    }
+  }
+
+  --animate-close-menu: close-menu 0.125s ease-in forwards;
+
+  @keyframes close-menu {
+    to {
+      opacity: 0;
+      transform: scaleY(0);
+    }
+  }
 }
 
 html,
