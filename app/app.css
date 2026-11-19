@@ -6,13 +6,15 @@
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
   "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   
-  --color-accent: #5ab900;
   --color-dark: #171717;
   --color-component: #ffffff03;
   --color-component-button: #c2c2c20d;    /* c2c2c2 0.05% */
   --color-b-component: #c2c2c21a;         /* c2c2c2 0.10% */
   --color-component-secondary: #c2c2c280; /* c2c2c2 0.50% */
   --color-ink: #c2c2c2;
+  --color-acsent: #5ab900;
+  --color-acsent-active: #5ab90033;       /* 5ab900 0.2% */
+  --color-b-acsent-active: #5ab9004d;       /* 5ab900 0.3% */
 
   --animate-open-menu: open-menu 0.125s ease-out;
   @keyframes open-menu {
