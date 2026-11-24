@@ -1,6 +1,6 @@
 import { useState } from "react";
 import logoIcon from "~/src/HuShine.webp";
-import LanguageButton from "./languageButton";
+import { LanguageButton, MobileLanguageButton } from "./languageButton";
 import ThemeButton from "./themeButton";
 
 const links = [
@@ -34,12 +34,12 @@ export default function Header() {
               alt="HuShine logo"
               className="h-12 w-12 rounded-xl"
             />
-            <h1 className="text-xl">{projectName}</h1>
+            <h1 className="text-xl pr-3">{projectName}</h1>
           </div>
 
-          <div className="hidden h-10 w-1 rounded-full border-r border-b-component pr-3 md:block lg:hidden"></div>
+          <div className="w-5 rounded-full px-4 md:block lg:hidden"></div>
 
-          <nav className="hidden items-center gap-2 text-base md:flex">
+          <nav className="hidden items-center gap-2 text-base md:flex text-nowrap">
             {links.map((l) => (
               <a
                 key={l.href + l.label}
@@ -50,6 +50,11 @@ export default function Header() {
               </a>
             ))}
           </nav>
+
+          <div className="flex md:hidden items-center gap-4 ">
+            <MobileLanguageButton />
+            <ThemeButton />
+          </div>
 
           <button
             onClick={toggleMenu}
