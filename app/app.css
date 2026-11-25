@@ -16,6 +16,14 @@
   --color-acsent-active: #5ab90033;       /* 5ab900 0.2% */
   --color-b-acsent-active: #5ab9004d;       /* 5ab900 0.3% */
 
+  /* Светлая тема */
+  --color-body-light: #FFFFFF;
+  --color-component-light: #00000008;
+  --color-component-button-light: #0000000a;
+  --color-b-component-light: #0000001a;
+  --color-component-secondary-light: #00000080;
+  --color-ink-light: #484646;
+
   --animate-open-menu: open-menu 0.125s ease-out;
   @keyframes open-menu {
     0% {
@@ -38,9 +46,11 @@
   }
 }
 
+@custom-variant light (&:where(.light, .light *));
+
 html,
 body {
-  @apply bg-white dark:bg-dark;
+  @apply light:bg-body-light bg-dark;
 
   @media (prefers-color-scheme: dark) {
     color-scheme: dark;
